@@ -1,10 +1,19 @@
+import { Outlet } from "react-router-dom"
+import { ToastContainer } from "react-toastify"
+import Header from './basic-compo/Header';
+import Footer from './basic-compo/Footer.jsx';
 
 
 function App() {
 
   return (
     <>
-      <h1>Vite + React</h1>
+      <ToastContainer />
+      <div>
+        <Header></Header>
+        <Outlet></Outlet>
+        <Footer></Footer>
+      </div>
     </>
   )
 }
