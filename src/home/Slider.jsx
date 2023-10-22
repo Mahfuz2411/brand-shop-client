@@ -11,7 +11,7 @@ const Slider = () => {
           <div
             className="relative before:content-[''] before:absolute before:top-0 before:left-0 before:w-full before:h-full before:bg-slate-950/80 z-0 grid place-items-center w-full min-h-screen"
             style={{
-              background: `url('${img1}')`,
+              background: `url('${img1}')`, 
               backgroundPosition: "center",
               backgroundSize: "cover",
               backgroundRepeat: "no-repeat",
