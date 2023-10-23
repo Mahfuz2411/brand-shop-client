@@ -1,40 +1,73 @@
-import Swal from 'sweetalert2'
+import Swal from "sweetalert2";
 const Add = () => {
-  const handleAddCoffee = event =>{
+  const handleAddCoffee = (event) => {
     event.preventDefault();
 
     const form = event.target;
 
     const name = form.Name.value;
-    const quantity = form.Quantity.value;
-    const suplier = form.Suplier.value;
-    const taste = form.Taste.value;
-    const category = form.Category.value;
-    const details = form.Details.value;
-    const photo = form.Photo.value;
+    const price = form.Price.value;
+    const brand = form.Brand.value;
+    const model = form.Model.value;
+    const image = form.Image.value;
+    const rating = form.Rating.value;
+    const description = form.Description.value;
 
-    const newCoffee = {name, quantity, suplier, taste, category, details, photo};
+    const newCar = { name, price, brand, model, image, rating, description };
 
-    // send data to the server
-    fetch('http://localhost:5000/coffee', {
-      method: 'POST',
-      headers: {
-        'content-type': 'application/json'
-      },
-      body: JSON.stringify(newCoffee)
-    })
-    .then(res => res.json())
-    .then(data => {
-      if(data.insertedId) {
-        Swal.fire({
-          title: 'Succes',
-          text: 'Coffee added succesfully',
-          icon: 'succes',
-          confirmButtonText: 'Ok'
-        })
-      }
-    })
-  }
+    if (
+      !name ||
+      !price ||
+      !brand ||
+      !model ||
+      !image ||
+      !rating ||
+      !description
+    ) {
+      Swal.fire({
+        title: "Error",
+        text: "Fields can't be empty",
+        icon: "error",
+        confirmButtonText: "Ok",
+      });
+    } else if (
+      ![
+        "bugatti",
+        "mclaren",
+        "farrari",
+        "roles royce",
+        "lamborgini",
+        "range rover",
+      ].includes(brand.toLowerCase())
+    ) {
+      Swal.fire({
+        title: "Error",
+        text: "We don't accept your given brand",
+        icon: "error",
+        confirmButtonText: "Ok",
+      });
+    } else {
+      fetch("http://localhost:5000/cars", {
+        method: "POST",
+        headers: {
+          "content-type": "application/json",
+        },
+        body: JSON.stringify(newCar),
+      })
+        .then((res) => res.json())
+        .then((data) => {
+          if (data.insertedId) {
+            Swal.fire({
+              title: "Succes",
+              text: "Car added succesfully",
+              icon: "success",
+              confirmButtonText: "Ok",
+            });
+          }
+        });
+    }
+  };
+  
   return (
     <div className="bg-[#F4F3F0] md:p-24">
       <h1 className="text-3xl font-extrabold text-center">ADD A CAR</h1>
@@ -148,7 +181,7 @@ const Add = () => {
               type="submit"
               name="Submit"
               className="btn btn-block btn-primary"
-              value="Add Coffee"
+              value="Add Car"
             />
           </div>
         </div>

@@ -47,7 +47,7 @@ const Header = () => {
               {links}
             </ul>
           </div>
-          <Link to="/" className="normal-case text-xl font-bold border-2 border-black p-2">
+          <Link to="/" className="normal-case text-sm md:text-xl font-bold border-2 border-black p-1 md:p-2">
           Brand-Shop
           </Link>
         </div>
@@ -57,18 +57,18 @@ const Header = () => {
         <div className="navbar-end">
           {user ? (
             <div className="flex justify-center items-center gap-2">
-              <button onClick={() => logOut()}  className="font-bold border-2 border-black p-2">Sign Out</button>
-              <Link to="/profile" className="rounded-full bg-slate-900 outline-0 overflow-hidden">
+              <button onClick={() => logOut()}  className="font-bold text-sm md:text-xl border-2 border-black p-1 md:p-2">Sign Out</button>
+              <div className="rounded-full bg-slate-900 outline-0 overflow-hidden">
                 <img
                   src={user.photoURL}
                   alt=""
-                  className="w-10 h-10 object-cover cursor-pointer"
+                  className="w-8 h-8 md:w-10 md:h-10 object-cover cursor-pointer"
                 />
-              </Link>
+              </div>
             </div>
           ) : (
             <Link to="/signin">
-              <button className="font-bold border-2 border-black p-2">Sing In</button>
+              <button className="font-bold text-sm md:text-xl border-2 border-black p-1 md:p-2">Sing In</button>
             </Link>
           )}
         </div>

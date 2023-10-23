@@ -16,6 +16,8 @@ import PrivateRoute from './basic-compo/PrivateRoute.jsx';
 import AuthProvider from './Context/AuthProvider.jsx';
 import Add from './private-compo/Add.jsx';
 import MyCart from './private-compo/MyCart.jsx';
+import Category from './category/Category.jsx';
+// import Update from './private-compo/Update.jsx';
 
 const router = createBrowserRouter([
   {
@@ -43,6 +45,20 @@ const router = createBrowserRouter([
           </PrivateRoute>
         ),
       },
+      {
+        path: "/category/:brand",
+        element: <Category></Category>,
+        loader: () => fetch('http://localhost:5000/cars')
+      },
+      // {
+      //   path: "/update/:id",
+      //   element: (
+      //     <PrivateRoute>
+      //       <Update></Update>
+      //     </PrivateRoute>
+      //   ),
+      //   loader: ({params}) => fetch(``)
+      // },
       {
         path: "/mycart",
         element: (
