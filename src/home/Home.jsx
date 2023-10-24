@@ -1,4 +1,5 @@
 import Brands from "./Brands";
+import Comments from "./Comments";
 import Slider from "./Slider";
 
 const Home = () => {
@@ -6,6 +7,7 @@ const Home = () => {
     <div>
       <Slider></Slider>
       <Brands></Brands>
+      <Comments></Comments>
     </div>
   );
 };
