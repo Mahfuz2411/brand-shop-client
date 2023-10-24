@@ -37,7 +37,7 @@ const Add = () => {
         "mclaren",
         "farrari",
         "roles royce",
-        "lamborgini",
+        "lamborghini",
         "range rover",
       ].includes(brand.toLowerCase())
     ) {
@@ -182,7 +182,7 @@ const Add = () => {
             <input
               type="submit"
               name="Submit"
-              className="btn btn-block btn-primary"
+              className="btn btn-block btn-neutral"
               value="Add Car"
             />
           </div>

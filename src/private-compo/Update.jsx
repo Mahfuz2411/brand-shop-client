@@ -45,7 +45,7 @@ const Update = () => {
         "mclaren",
         "farrari",
         "roles royce",
-        "lamborgini",
+        "lamborghini",
         "range rover",
       ].includes(brand.toLowerCase())
     ) {
@@ -197,7 +197,7 @@ const Update = () => {
             <input
               type="submit"
               name="Submit"
-              className="btn btn-block btn-primary"
+              className="btn btn-block btn-neutral"
               value="Update Car"
             />
           </div>
