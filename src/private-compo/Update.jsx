@@ -1,7 +1,23 @@
+import { useContext, useEffect, useState } from "react";
 import Swal from "sweetalert2";
+import { IdContext } from "../Context/IdProvider";
+import { useNavigate } from "react-router-dom";
 
-const Add = () => {
-  const handleAddCar = (event) => {
+const Update = () => {
+  const { id } = useContext(IdContext);
+  const [car, setCar] = useState({});
+  const navigate = useNavigate();
+  useEffect(() => {
+    if (id) {
+      fetch(`http://localhost:5000/cars/${id}`)
+        .then((res) => res.json())
+        .then((data) => setCar({ ...car, ...data }));
+    } else navigate("/add");
+  }, []);
+
+  console.log(car);
+
+  const handleUpdateCar = (event) => {
     event.preventDefault();
 
     const form = event.target;
@@ -48,8 +64,8 @@ const Add = () => {
         confirmButtonText: "Ok",
       });
     } else {
-      fetch("http://localhost:5000/cars", {
-        method: "POST",
+      fetch(`http://localhost:5000/cars/${id}`, {
+        method: "PUT",
         headers: {
           "content-type": "application/json",
         },
@@ -57,10 +73,10 @@ const Add = () => {
       })
         .then((res) => res.json())
         .then((data) => {
-          if (data.insertedId) {
+          if (data.modifiedCount) {
             Swal.fire({
               title: "Succes",
-              text: "Car added succesfully",
+              text: "Car updated succesfully",
               icon: "success",
               confirmButtonText: "Ok",
             });
@@ -72,8 +88,8 @@ const Add = () => {
 
   return (
     <div className="bg-[#F4F3F0] md:p-24">
-      <h1 className="text-3xl font-extrabold text-center">ADD A CAR</h1>
-      <form onSubmit={handleAddCar} action="">
+      <h1 className="text-3xl font-extrabold text-center">Update CAR</h1>
+      <form onSubmit={handleUpdateCar} action="">
         {/* Form name and Price row*/}
         <div className="md:flex">
           <div className="form-control w-full p-10">
@@ -84,6 +100,7 @@ const Add = () => {
               <input
                 type="text"
                 name="Name"
+                defaultValue={car.name}
                 className="input input-bordered join-item w-full"
                 placeholder="Name"
               />
@@ -97,6 +114,7 @@ const Add = () => {
               <input
                 type="number"
                 name="Price"
+                defaultValue={car.price}
                 className="input input-bordered join-item w-full"
                 placeholder="Price"
               />
@@ -113,6 +131,7 @@ const Add = () => {
               <input
                 type="text"
                 name="Brand"
+                defaultValue={car.brand}
                 className="input input-bordered join-item w-full"
                 placeholder="Brand Name"
               />
@@ -126,6 +145,7 @@ const Add = () => {
               <input
                 type="text"
                 name="Model"
+                defaultValue={car.model}
                 className="input input-bordered join-item w-full"
                 placeholder="Model"
               />
@@ -142,6 +162,7 @@ const Add = () => {
               <input
                 type="text"
                 name="Image"
+                defaultValue={car.image}
                 className="input input-bordered join-item w-full"
                 placeholder="Image URL"
               />
@@ -155,6 +176,7 @@ const Add = () => {
               <input
                 type="text"
                 name="Rating"
+                defaultValue={car.rating}
                 className="input input-bordered join-item w-full"
                 placeholder="Rating (1-5)"
               />
@@ -171,6 +193,7 @@ const Add = () => {
               <input
                 type="text"
                 name="Description"
+                defaultValue={car.description}
                 className="input input-bordered join-item w-full"
                 placeholder="Short description"
               />
@@ -183,7 +206,7 @@ const Add = () => {
               type="submit"
               name="Submit"
               className="btn btn-block btn-primary"
-              value="Add Car"
+              value="Update Car"
             />
           </div>
         </div>
@@ -192,4 +215,4 @@ const Add = () => {
   );
 };
 
-export default Add;
+export default Update;

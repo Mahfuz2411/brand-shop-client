@@ -17,7 +17,8 @@ import AuthProvider from './Context/AuthProvider.jsx';
 import Add from './private-compo/Add.jsx';
 import MyCart from './private-compo/MyCart.jsx';
 import Category from './category/Category.jsx';
-// import Update from './private-compo/Update.jsx';
+import Update from './private-compo/Update.jsx';
+import IdProvider from './Context/IdProvider.jsx';
 
 const router = createBrowserRouter([
   {
@@ -46,19 +47,18 @@ const router = createBrowserRouter([
         ),
       },
       {
+        path: "/category/:brand/:id/update",
+        element: (
+          <PrivateRoute>
+            <Update></Update>
+          </PrivateRoute>
+        ),
+      },
+      {
         path: "/category/:brand",
         element: <Category></Category>,
         loader: () => fetch('http://localhost:5000/cars')
       },
-      // {
-      //   path: "/update/:id",
-      //   element: (
-      //     <PrivateRoute>
-      //       <Update></Update>
-      //     </PrivateRoute>
-      //   ),
-      //   loader: ({params}) => fetch(``)
-      // },
       {
         path: "/mycart",
         element: (
@@ -74,7 +74,9 @@ const router = createBrowserRouter([
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
     <AuthProvider>
-      <RouterProvider router={router} />
+      <IdProvider>
+        <RouterProvider router={router} />
+      </IdProvider>
     </AuthProvider>
   </React.StrictMode>,
 )

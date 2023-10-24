@@ -1,6 +1,21 @@
 import PropTypes from "prop-types";
+import { useContext } from "react";
 import { FaRegStar } from 'react-icons/fa'
+import { IdContext } from "../Context/IdProvider";
+import { Link, useNavigate } from "react-router-dom";
+
 const Cards = ({ car }) => {
+  const {setId} = useContext(IdContext);
+  const navigate = useNavigate();
+
+  const handleUpdate = async ()=>{
+    await setId(car._id);
+    navigate(`/category/${car.brand}/${car._id}/update`);
+  }
+  const handleDetails = async ()=>{
+    await setId(car._id);
+    navigate(`/category/${car.brand}/${car._id}`)
+  }
   return (
     <>
       <div className="container mx-auto card w-full h-full bg-base-100 shadow-xl flex flex-col justify-between">
@@ -23,8 +38,14 @@ const Cards = ({ car }) => {
             
           </div>
           <div className="card-actions">
-            <button className="btn btn-neutral w-full">Update</button>
-            <button className="btn btn-neutral w-full">Details</button>
+            <button onClick={handleUpdate} className="btn btn-neutral w-full">Update</button>
+            <button onClick={handleDetails} className="btn btn-neutral w-full">Details</button>
+            {/* <Link to={`/category/${car.brand}/${car._id}/update`} className="w-full">
+              
+            </Link>
+            <Link to={`/category/${car.brand}/${car._id}`} className="w-full">
+              
+            </Link> */}
           </div>
         </div>
       </div>
