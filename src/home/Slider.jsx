@@ -28,10 +28,10 @@ const Slider = () => {
             </div>
           </div>
           <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
-            <a href="#slide4" className="btn btn-circle">
+            <a href="#slide4" className="btn btn-circle btn-outline md:btn-neutral">
               ❮
             </a>
-            <a href="#slide2" className="btn btn-circle">
+            <a href="#slide2" className="btn btn-circle btn-outline md:btn-neutral">
               ❯
             </a>
           </div>
@@ -47,20 +47,17 @@ const Slider = () => {
             }}
           >
             <div className="relative z-10 w-full max-w-lg mx-auto py-8 px-4 flex flex-col gap-5">
-              <h1 className="text-4xl font-bold text-center text-white">Lorem ipsum dolor sit.</h1>
+              <h1 className="text-4xl font-bold text-center text-white">Driving Dreams, One Click</h1>
               <p className="text-base font-normal text-center text-gray-50">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                Necessitatibus ipsa vero beatae suscipit similique! Iste at
-                optio, voluptas iure libero, molestiae adipisci excepturi ea
-                maxime eligendi ipsum quam animi! Quas!
+              The seamless and convenient experience we provide for car enthusiasts, buyers, and sellers. With a single click, we make it possible to explore your dream car, connect with potential buyers, and make your automotive aspirations a reality. Our platform is designed to simplify the often complex process of buying and selling cars, making it as easy as the click of a button. We're here to drive your dreams forward, effortlessly and efficiently.
               </p>
             </div>
           </div>
           <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
-            <a href="#slide1" className="btn btn-circle">
+            <a href="#slide1" className="btn btn-circle btn-outline md:btn-neutral">
               ❮
             </a>
-            <a href="#slide3" className="btn btn-circle">
+            <a href="#slide3" className="btn btn-circle btn-outline md:btn-neutral">
               ❯
             </a>
           </div>
@@ -76,20 +73,17 @@ const Slider = () => {
             }}
           >
             <div className="relative z-10 w-full max-w-lg mx-auto py-8 px-4 flex flex-col gap-5">
-              <h1 className="text-4xl font-bold text-center text-white">Lorem ipsum dolor sit.</h1>
+              <h1 className="text-4xl font-bold text-center text-white">Driving Dreams, One Click</h1>
               <p className="text-base font-normal text-center text-gray-50">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                Necessitatibus ipsa vero beatae suscipit similique! Iste at
-                optio, voluptas iure libero, molestiae adipisci excepturi ea
-                maxime eligendi ipsum quam animi! Quas!
+              The seamless and convenient experience we provide for car enthusiasts, buyers, and sellers. With a single click, we make it possible to explore your dream car, connect with potential buyers, and make your automotive aspirations a reality. Our platform is designed to simplify the often complex process of buying and selling cars, making it as easy as the click of a button. We're here to drive your dreams forward, effortlessly and efficiently.
               </p>
             </div>
           </div>
           <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
-            <a href="#slide2" className="btn btn-circle">
+            <a href="#slide2" className="btn btn-circle btn-outline md:btn-neutral">
               ❮
             </a>
-            <a href="#slide4" className="btn btn-circle">
+            <a href="#slide4" className="btn btn-circle btn-outline md:btn-neutral">
               ❯
             </a>
           </div>
@@ -105,20 +99,17 @@ const Slider = () => {
             }}
           >
             <div className="relative z-10 w-full max-w-lg mx-auto py-8 px-4 flex flex-col gap-5">
-              <h1 className="text-4xl font-bold text-center text-white">Lorem ipsum dolor sit.</h1>
+              <h1 className="text-4xl font-bold text-center text-white">Driving Dreams, One Click</h1>
               <p className="text-base font-normal text-center text-gray-50">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                Necessitatibus ipsa vero beatae suscipit similique! Iste at
-                optio, voluptas iure libero, molestiae adipisci excepturi ea
-                maxime eligendi ipsum quam animi! Quas!
+              The seamless and convenient experience we provide for car enthusiasts, buyers, and sellers. With a single click, we make it possible to explore your dream car, connect with potential buyers, and make your automotive aspirations a reality. Our platform is designed to simplify the often complex process of buying and selling cars, making it as easy as the click of a button. We're here to drive your dreams forward, effortlessly and efficiently.
               </p>
             </div>
           </div>
           <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
-            <a href="#slide3" className="btn btn-circle">
+            <a href="#slide3" className="btn btn-circle btn-outline md:btn-neutral">
               ❮
             </a>
-            <a href="#slide1" className="btn btn-circle">
+            <a href="#slide1" className="btn btn-circle btn-outline md:btn-neutral">
               ❯
             </a>
           </div>

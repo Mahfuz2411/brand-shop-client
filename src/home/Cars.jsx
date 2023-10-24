@@ -10,10 +10,10 @@ const Cars = ({car}) => {
           className='w-full h-full object-cover'
         />
       </figure>
-      <div className="card-body w-full h-full ">
-        
+      <div className="card-body w-full h-full items-center">
+      <img src={car.logo} alt="logo" className='md:hidden h-10 w-10 content-center object-cover rounded-full' />
         <h2 className="card-title m-auto text-3xl md:text-3xl">
-          <img src={car.logo} alt="logo" className='h-10 w-10 content-center object-cover rounded-full' />
+          <img src={car.logo} alt="logo" className='hidden md:flex h-10 w-10 content-center object-cover rounded-full' />
           {car.name}
         </h2>
       </div>
