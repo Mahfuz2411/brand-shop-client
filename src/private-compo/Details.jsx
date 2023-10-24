@@ -5,7 +5,7 @@ import { BsFillCalendarFill } from "react-icons/bs";
 
 const Details = () => {
   const car = useLoaderData();
-  console.log(car); 
+  // console.log(car); 
   return (
     <div
       className="pt-10 relative before:content-[''] before:absolute before:top-0 before:left-0 before:w-full before:h-full before:bg-slate-950/80 z-0 flex flex-col justify-between items-center w-full min-h-screen gap-8"

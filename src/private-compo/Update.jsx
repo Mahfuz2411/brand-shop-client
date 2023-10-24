@@ -1,21 +1,13 @@
 import { useContext, useEffect, useState } from "react";
 import Swal from "sweetalert2";
 import { IdContext } from "../Context/IdProvider";
-import { useNavigate } from "react-router-dom";
+import { useLoaderData, useNavigate } from "react-router-dom";
 
 const Update = () => {
-  const { id } = useContext(IdContext);
-  const [car, setCar] = useState({});
-  const navigate = useNavigate();
-  useEffect(() => {
-    if (id) {
-      fetch(`http://localhost:5000/cars/${id}`)
-        .then((res) => res.json())
-        .then((data) => setCar({ ...car, ...data }));
-    } else navigate("/add");
-  }, []);
-
+  const car = useLoaderData();
   console.log(car);
+
+  
 
   const handleUpdateCar = (event) => {
     event.preventDefault();
@@ -64,7 +56,7 @@ const Update = () => {
         confirmButtonText: "Ok",
       });
     } else {
-      fetch(`http://localhost:5000/cars/${id}`, {
+      fetch(`http://localhost:5000/cars/${car._id}`, {
         method: "PUT",
         headers: {
           "content-type": "application/json",
