@@ -19,6 +19,7 @@ import MyCart from './private-compo/MyCart.jsx';
 import Category from './category/Category.jsx';
 import Update from './private-compo/Update.jsx';
 import IdProvider from './Context/IdProvider.jsx';
+import Details from './private-compo/Details.jsx';
 
 const router = createBrowserRouter([
   {
@@ -53,6 +54,15 @@ const router = createBrowserRouter([
             <Update></Update>
           </PrivateRoute>
         ),
+      },
+      {
+        path: "/category/:brand/:id/details",
+        element: (
+          <PrivateRoute>
+            <Details></Details>
+          </PrivateRoute>
+        ),
+        loader: ({params}) => fetch(`http://localhost:5000/cars/${params.id}`)
       },
       {
         path: "/category/:brand",

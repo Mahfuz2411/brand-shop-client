@@ -39,13 +39,13 @@ const Cards = ({ car }) => {
           </div>
           <div className="card-actions">
             <button onClick={handleUpdate} className="btn btn-neutral w-full">Update</button>
-            <button onClick={handleDetails} className="btn btn-neutral w-full">Details</button>
+            {/* <button onClick={handleDetails} className="btn btn-neutral w-full">Details</button> */}
             {/* <Link to={`/category/${car.brand}/${car._id}/update`} className="w-full">
               
-            </Link>
-            <Link to={`/category/${car.brand}/${car._id}`} className="w-full">
-              
             </Link> */}
+            <Link to={`/category/${car.brand}/${car._id}/details`} className="w-full">
+              <button className="btn btn-neutral w-full">Details</button>
+            </Link> 
           </div>
         </div>
       </div>
