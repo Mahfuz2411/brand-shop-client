@@ -13,7 +13,7 @@ const Mcards = ({cart}) => {
     .then(data=>setCar(data))
   }, []);
 
-  console.log(car);
+  // console.log(car);
 
   return (
     <>

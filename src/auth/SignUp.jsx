@@ -65,7 +65,7 @@ const SignUp = () => {
 
   const handleCreateAccount = (e) => {
     e.preventDefault();
-    if(!passValidator) {
+    if(!passValidator(user.password)) {
       return toast("Password requirements not met.");
     }
     createUser(user.email, user.password)

@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import Cars from "./Cars";
+import BrSlider from "../private-compo/BrSlider";
 
 const Brands = () => {
   const [cars, setCars] = useState([]);

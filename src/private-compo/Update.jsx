@@ -5,7 +5,7 @@ import { useLoaderData, useNavigate } from "react-router-dom";
 
 const Update = () => {
   const car = useLoaderData();
-  console.log(car);
+  // console.log(car);
 
   
 

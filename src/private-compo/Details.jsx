@@ -24,7 +24,7 @@ const Details = () => {
     })
       .then((res) => res.json())
       .then((data) => {
-        console.log(data);
+        // console.log(data);
         if (data) {
           Swal.fire({
             icon: "success",
@@ -40,7 +40,7 @@ const Details = () => {
         }
       })
       .catch((error) => {
-        console.log(error);
+        // console.log(error);
         Swal.fire({
           icon: "error",
           title: "Oops...",
