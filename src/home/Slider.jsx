@@ -18,12 +18,9 @@ const Slider = () => {
             }}
           >
             <div className="relative z-10 w-full max-w-lg mx-auto py-8 px-4 flex flex-col gap-5">
-              <h1 className="text-4xl font-bold text-center text-white">Lorem ipsum dolor sit.</h1>
+              <h1 className="text-4xl font-bold text-center text-white">Driving Dreams, One Click</h1>
               <p className="text-base font-normal text-center text-gray-50">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                Necessitatibus ipsa vero beatae suscipit similique! Iste at
-                optio, voluptas iure libero, molestiae adipisci excepturi ea
-                maxime eligendi ipsum quam animi! Quas!
+              The seamless and convenient experience we provide for car enthusiasts, buyers, and sellers. With a single click, we make it possible to explore your dream car, connect with potential buyers, and make your automotive aspirations a reality. Our platform is designed to simplify the often complex process of buying and selling cars, making it as easy as the click of a button. We&apos;re here to drive your dreams forward, effortlessly and efficiently.
               </p>
             </div>
           </div>
@@ -49,7 +46,7 @@ const Slider = () => {
             <div className="relative z-10 w-full max-w-lg mx-auto py-8 px-4 flex flex-col gap-5">
               <h1 className="text-4xl font-bold text-center text-white">Driving Dreams, One Click</h1>
               <p className="text-base font-normal text-center text-gray-50">
-              The seamless and convenient experience we provide for car enthusiasts, buyers, and sellers. With a single click, we make it possible to explore your dream car, connect with potential buyers, and make your automotive aspirations a reality. Our platform is designed to simplify the often complex process of buying and selling cars, making it as easy as the click of a button. We're here to drive your dreams forward, effortlessly and efficiently.
+              The seamless and convenient experience we provide for car enthusiasts, buyers, and sellers. With a single click, we make it possible to explore your dream car, connect with potential buyers, and make your automotive aspirations a reality. Our platform is designed to simplify the often complex process of buying and selling cars, making it as easy as the click of a button. We&apos;re here to drive your dreams forward, effortlessly and efficiently.
               </p>
             </div>
           </div>
@@ -75,7 +72,7 @@ const Slider = () => {
             <div className="relative z-10 w-full max-w-lg mx-auto py-8 px-4 flex flex-col gap-5">
               <h1 className="text-4xl font-bold text-center text-white">Driving Dreams, One Click</h1>
               <p className="text-base font-normal text-center text-gray-50">
-              The seamless and convenient experience we provide for car enthusiasts, buyers, and sellers. With a single click, we make it possible to explore your dream car, connect with potential buyers, and make your automotive aspirations a reality. Our platform is designed to simplify the often complex process of buying and selling cars, making it as easy as the click of a button. We're here to drive your dreams forward, effortlessly and efficiently.
+              The seamless and convenient experience we provide for car enthusiasts, buyers, and sellers. With a single click, we make it possible to explore your dream car, connect with potential buyers, and make your automotive aspirations a reality. Our platform is designed to simplify the often complex process of buying and selling cars, making it as easy as the click of a button. We&apos;re here to drive your dreams forward, effortlessly and efficiently.
               </p>
             </div>
           </div>
@@ -101,7 +98,7 @@ const Slider = () => {
             <div className="relative z-10 w-full max-w-lg mx-auto py-8 px-4 flex flex-col gap-5">
               <h1 className="text-4xl font-bold text-center text-white">Driving Dreams, One Click</h1>
               <p className="text-base font-normal text-center text-gray-50">
-              The seamless and convenient experience we provide for car enthusiasts, buyers, and sellers. With a single click, we make it possible to explore your dream car, connect with potential buyers, and make your automotive aspirations a reality. Our platform is designed to simplify the often complex process of buying and selling cars, making it as easy as the click of a button. We're here to drive your dreams forward, effortlessly and efficiently.
+              The seamless and convenient experience we provide for car enthusiasts, buyers, and sellers. With a single click, we make it possible to explore your dream car, connect with potential buyers, and make your automotive aspirations a reality. Our platform is designed to simplify the often complex process of buying and selling cars, making it as easy as the click of a button. We&apos;re here to drive your dreams forward, effortlessly and efficiently.
               </p>
             </div>
           </div>
